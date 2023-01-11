@@ -8,7 +8,7 @@ const defaultCartState = {
 };
 
 const cartReducer = (state, action) => {
-  if (action.type === 'ADD') {console.log(state);
+  if (action.type === 'ADD') {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
     );
