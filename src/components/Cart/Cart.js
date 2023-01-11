@@ -18,8 +18,12 @@ const Cart = () => {
     cartCtx.removeItem(id);
   };
 
-  const cartItemAddHandler = (item) => {
+  /* const cartItemAddHandler = (item) => {
     cartCtx.addItem(item);
+  }; */
+
+  const cartItemAddHandler = (id) => {
+    cartCtx.addItem(id);
   };
   
   const submitOrderHandler = (userData) => {
@@ -40,7 +44,7 @@ const Cart = () => {
           price={item.price}
           currency={item.currency}
           onRemove={cartItemRemoveHandler.bind(null, item.id)}
-          onAdd={cartItemAddHandler.bind(null, item)}
+          onAdd={cartItemAddHandler.bind(null, item.id/* item */)}
         />
       ))}
     </ul>

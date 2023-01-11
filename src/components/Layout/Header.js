@@ -15,15 +15,16 @@ const Header = (props) => {
 
   return (
     <header className={classes.header}>
-      <Link to="/"><h1 className={classes.headerText}>Ace E-commerce</h1></Link>
-      <Link to="/cart">
-      <button className={classes.button} >
-        <span className={classes.icon}>
-          <ShoppingCartIcon />
-        </span>
-        <span>Your Cart</span>
-        <span className={classes.badge}>{numberOfCartItems}</span>
-      </button></Link>
+      <Link to="/" className={classes.headerText}><h1>Ace E-commerce</h1></Link>
+      <Link to="/cart" style={{ textDecoration: 'none' }}>
+        <button className={classes.button} >
+          <span className={classes.icon}>
+            <ShoppingCartIcon />
+          </span>
+          <span>Your Cart</span>
+          <span className={classes.badge}>{numberOfCartItems}</span>
+        </button>
+      </Link>
     </header>
   );
 };
